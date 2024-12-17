@@ -1,0 +1,954 @@
+{
+  "mrt_stations": {
+    "Aljunied": {
+      "latitude": 1.3164326118157,
+      "longitude": 103.882906044385
+    },
+    "Ang Mo Kio": {
+      "latitude": 1.36993284962264,
+      "longitude": 103.849558091776
+    },
+    "Bakau": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Bangkit": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Bartley": {
+      "latitude": 1.3424454382925,
+      "longitude": 103.880197087117
+    },
+    "Beauty World": {
+      "latitude": 1.34171846435096,
+      "longitude": 103.775413562255
+    },
+    "Bedok": {
+      "latitude": 1.32397996868158,
+      "longitude": 103.929984495066
+    },
+    "Bedok North": {
+      "latitude": 1.33474211664091,
+      "longitude": 103.91797832995
+    },
+    "Bedok Reservoir": {
+      "latitude": 1.33660782955099,
+      "longitude": 103.932234623286
+    },
+    "Bencoolen": {
+      "latitude": 1.29891843369422,
+      "longitude": 103.850353762717
+    },
+    "Bendemeer": {
+      "latitude": 1.31367252847691,
+      "longitude": 103.862977620945
+    },
+    "Bishan": {
+      "latitude": 1.35070567650568,
+      "longitude": 103.848078926424
+    },
+    "Boon Keng": {
+      "latitude": 1.31959679168634,
+      "longitude": 103.861750715496
+    },
+    "Boon Lay": {
+      "latitude": 1.33853090899411,
+      "longitude": 103.705911300383
+    },
+    "Botanic Gardens": {
+      "latitude": 1.32219000242716,
+      "longitude": 103.815121122527
+    },
+    "Braddell": {
+      "latitude": 1.34060469319581,
+      "longitude": 103.847230970681
+    },
+    "Bras Basah": {
+      "latitude": 1.29685734391919,
+      "longitude": 103.850836643979
+    },
+    "Buangkok": {
+      "latitude": 1.38274236084393,
+      "longitude": 103.893158528855
+    },
+    "Bugis": {
+      "latitude": 1.30030718298754,
+      "longitude": 103.855928041431
+    },
+    "Bukit Batok": {
+      "latitude": 1.3487108105756,
+      "longitude": 103.749334517338
+    },
+    "Bukit Gombak": {
+      "latitude": 1.35871216207818,
+      "longitude": 103.751883836125
+    },
+    "Bukit Panjang": {
+      "latitude": 1.37861205530289,
+      "longitude": 103.761405869523
+    },
+    "Buona Vista": {
+      "latitude": 1.30726492984418,
+      "longitude": 103.790091155395
+    },
+    "Caldecott": {
+      "latitude": 1.33734722320212,
+      "longitude": 103.839544077561
+    },
+    "Changi Airport": {
+      "latitude": 1.35747897447692,
+      "longitude": 103.98788356959
+    },
+    "Cheng Lim": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Chinatown": {
+      "latitude": 1.28449571976396,
+      "longitude": 103.843607911381
+    },
+    "Chinese Garden": {
+      "latitude": 1.34224494823931,
+      "longitude": 103.732766601621
+    },
+    "Choa Chu Kang": {
+      "latitude": 1.31422169787868,
+      "longitude": 103.881752470722
+    },
+    "Clementi": {
+      "latitude": 1.31522520298522,
+      "longitude": 103.76516855199
+    },
+    "Commonwealth": {
+      "latitude": 1.30241162155935,
+      "longitude": 103.79829942216
+    },
+    "Compassvale": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Coral Edge": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Cove": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Dakota": {
+      "latitude": 1.30833703867445,
+      "longitude": 103.888614668226
+    },
+    "Damai": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Dover": {
+      "latitude": 1.31139153717332,
+      "longitude": 103.778656381761
+    },
+    "Esplanade": {
+      "latitude": 1.29133990707454,
+      "longitude": 103.854609475029
+    },
+    "Eunos": {
+      "latitude": 1.31976065808207,
+      "longitude": 103.903047958324
+    },
+    "Fajar": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Farmway": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Farrer Park": {
+      "latitude": 1.31314029963164,
+      "longitude": 103.854754721344
+    },
+    "Farrer Road": {
+      "latitude": 1.31743915158967,
+      "longitude": 103.807379214161
+    },
+    "Fernvale": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Geylang Bahru": {
+      "latitude": 1.32130110228321,
+      "longitude": 103.871622627142
+    },
+    "HarbourFront": {
+      "latitude": 1.26538938429647,
+      "longitude": 103.821530157095
+    },
+    "Holland Village": {
+      "latitude": 1.31226422601049,
+      "longitude": 103.796470444998
+    },
+    "Hougang": {
+      "latitude": 1.37079214929041,
+      "longitude": 103.892321656467
+    },
+    "Jalan Besar": {
+      "latitude": 1.3051713878069,
+      "longitude": 103.855295713435
+    },
+    "Jelapang": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Jurong East": {
+      "latitude": 1.33329506563598,
+      "longitude": 103.742153884191
+    },
+    "Kadaloor": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Kaki Bukit": {
+      "latitude": 1.33503853739157,
+      "longitude": 103.908775991205
+    },
+    "Kallang": {
+      "latitude": 1.31148732841247,
+      "longitude": 103.871347274865
+    },
+    "Kangkar": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Keat Hong": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Kembangan": {
+      "latitude": 1.32104702761608,
+      "longitude": 103.91292554527
+    },
+    "Khatib": {
+      "latitude": 1.41758906054002,
+      "longitude": 103.833061043125
+    },
+    "King Albert Park": {
+      "latitude": 1.335893496278,
+      "longitude": 103.783235863233
+    },
+    "Kovan": {
+      "latitude": 1.36039772654497,
+      "longitude": 103.885544567028
+    },
+    "Kupang": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Labrador Park": {
+      "latitude": 1.2722270505362,
+      "longitude": 103.802744505566
+    },
+    "Lakeside": {
+      "latitude": 1.34410477510373,
+      "longitude": 103.720301861904
+    },
+    "Lavender": {
+      "latitude": 1.30750657093807,
+      "longitude": 103.86293845244
+    },
+    "Layar": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Little India": {
+      "latitude": 1.3072888243648,
+      "longitude": 103.849922418455
+    },
+    "Lorong Chuan": {
+      "latitude": 1.35163927757418,
+      "longitude": 103.863945738773
+    },
+    "MacPherson": {
+      "latitude": 1.32583875798262,
+      "longitude": 103.890312834364
+    },
+    "Marsiling": {
+      "latitude": 1.43262603485889,
+      "longitude": 103.774051197031
+    },
+    "Marymount": {
+      "latitude": 1.34870726290354,
+      "longitude": 103.839423132604
+    },
+    "Mattar": {
+      "latitude": 1.32687671501334,
+      "longitude": 103.883247509542
+    },
+    "Meridian": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Mountbatten": {
+      "latitude": 1.30615406128913,
+      "longitude": 103.883045148696
+    },
+    "Nibong": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Nicoll Highway": {
+      "latitude": 1.29956843029404,
+      "longitude": 103.863977721184
+    },
+    "Novena": {
+      "latitude": 1.32021100706836,
+      "longitude": 103.843656761867
+    },
+    "Oasis": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Outram Park": {
+      "latitude": 1.2802415328084,
+      "longitude": 103.840052100136
+    },
+    "Pasir Panjang": {
+      "latitude": 1.27621352233766,
+      "longitude": 103.791350313288
+    },
+    "Pasir Ris": {
+      "latitude": 1.37300805046319,
+      "longitude": 103.949265083922
+    },
+    "Paya Lebar": {
+      "latitude": 1.31810656871073,
+      "longitude": 103.893158734867
+    },
+    "Pending": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Petir": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Phoenix": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Pioneer": {
+      "latitude": 1.33756383090029,
+      "longitude": 103.697631494536
+    },
+    "Potong Pasir": {
+      "latitude": 1.3318797140041,
+      "longitude": 103.869057877586
+    },
+    "Punggol": {
+      "latitude": 1.40439782602064,
+      "longitude": 103.902044299842
+    },
+    "Queenstown": {
+      "latitude": 1.29419362236417,
+      "longitude": 103.806100814457
+    },
+    "Ranggung": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Redhill": {
+      "latitude": 1.28934817825579,
+      "longitude": 103.817043991803
+    },
+    "Renjong": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Riviera": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Rochor": {
+      "latitude": 1.30385218555028,
+      "longitude": 103.852769429428
+    },
+    "Rumbia": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Segar": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Sembawang": {
+      "latitude": 1.44902668521092,
+      "longitude": 103.820139486468
+    },
+    "Sengkang": {
+      "latitude": 1.39174613283898,
+      "longitude": 103.895508171163
+    },
+    "Senja": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Serangoon": {
+      "latitude": 1.35063361526525,
+      "longitude": 103.872771660431
+    },
+    "Simei": {
+      "latitude": 1.34317949620659,
+      "longitude": 103.953309510101
+    },
+    "Soo Teck": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "South View": {
+      "latitude": 1.27455475919137,
+      "longitude": 103.863574321728
+    },
+    "Sumang": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Tai Seng": {
+      "latitude": 1.33533999302463,
+      "longitude": 103.888265446029
+    },
+    "Tampines": {
+      "latitude": 1.35619148271544,
+      "longitude": 103.9546344625
+    },
+    "Tampines East": {
+      "latitude": 1.35619148271544,
+      "longitude": 103.9546344625
+    },
+    "Tampines West": {
+      "latitude": 1.3456336579777,
+      "longitude": 103.938492495285
+    },
+    "Tanah Merah": {
+      "latitude": 1.32731098211445,
+      "longitude": 103.946451703007
+    },
+    "Tanjong Pagar": {
+      "latitude": 1.27656131737246,
+      "longitude": 103.845725186759
+    },
+    "Teck Whye": {
+      "latitude": 1.38273704594211,
+      "longitude": 103.753517098194
+    },
+    "Telok Blangah": {
+      "latitude": 1.27070647772509,
+      "longitude": 103.809761611219
+    },
+    "Thanggam": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Tiong Bahru": {
+      "latitude": 1.28610253588403,
+      "longitude": 103.827445112691
+    },
+    "Toa Payoh": {
+      "latitude": 1.3326840912586,
+      "longitude": 103.847608851178
+    },
+    "Tongkang": {
+      "latitude": 1.44016248163827,
+      "longitude": 103.800527184397
+    },
+    "Ubi": {
+      "latitude": 1.3298832504798,
+      "longitude": 103.899082581327
+    },
+    "Upper Changi": {
+      "latitude": 1.34173977444995,
+      "longitude": 103.961472788634
+    },
+    "Woodlands": {
+      "latitude": 1.43681962961519,
+      "longitude": 103.786066799253
+    },
+    "Woodleigh": {
+      "latitude": 1.33982824592182,
+      "longitude": 103.87096088798
+    },
+    "Yew Tee": {
+      "latitude": 1.39729771118639,
+      "longitude": 103.74735767326
+    },
+    "Yio Chu Kang": {
+      "latitude": 1.38149882492597,
+      "longitude": 103.845170704861
+    },
+    "Yishun": {
+      "latitude": 1.42952522867762,
+      "longitude": 103.834995141847
+    },
+    "one-north": {
+      "latitude": 1.29968953488969,
+      "longitude": 103.787412789536
+    }
+  },
+  "malls": {
+    "321 Clementi": {
+      "latitude": 1.31200212030821,
+      "longitude": 103.764986676365
+    },
+    "888 Plaza": {
+      "latitude": 1.43712301500434,
+      "longitude": 103.795314383823
+    },
+    "AMK Hub": {
+      "latitude": 1.36938922690344,
+      "longitude": 103.84847796594
+    },
+    "Admiralty Place": {
+      "latitude": 1.43998366608733,
+      "longitude": 103.801293104268
+    },
+    "Alexandra Central": {
+      "latitude": 1.28728320930592,
+      "longitude": 103.805283367958
+    },
+    "Anchorpoint": {
+      "latitude": 1.28893477974497,
+      "longitude": 103.805607779399
+    },
+    "Aperia": {
+      "latitude": 1.3097112065077,
+      "longitude": 103.864326436447
+    },
+    "Balestier Hill Shopping Centre": {
+      "latitude": 1.32616307866261,
+      "longitude": 103.843741438467
+    },
+    "Beauty World Plaza": {
+      "latitude": 1.34180018619223,
+      "longitude": 103.776259359854
+    },
+    "Bedok Mall": {
+      "latitude": 1.32479361283131,
+      "longitude": 103.929182068033
+    },
+    "Boon Lay Shopping Centre": {
+      "latitude": 1.34637376407877,
+      "longitude": 103.712472819666
+    },
+    "Broadway Plaza": {
+      "latitude": 1.37193729131781,
+      "longitude": 103.845949444498
+    },
+    "Buangkok Square": {
+      "latitude": 1.38433426615655,
+      "longitude": 103.881623070164
+    },
+    "Bugis Cube": {
+      "latitude": 1.2981408343975,
+      "longitude": 103.855635339249
+    },
+    "Bugis+": {
+      "latitude": 1.29911287475873,
+      "longitude": 103.855411173758
+    },
+    "Bukit Panjang Plaza": {
+      "latitude": 1.37989494369864,
+      "longitude": 103.764459887796
+    },
+    "Bukit Timah Plaza": {
+      "latitude": 1.3386316527745,
+      "longitude": 103.778585430975
+    },
+    "Canberra Plaza": {
+      "latitude": 1.44349544527985,
+      "longitude": 103.830345369213
+    },
+    "Causeway Point": {
+      "latitude": 1.43590007901468,
+      "longitude": 103.785795816344
+    },
+    "Century Square": {
+      "latitude": 1.35236829566862,
+      "longitude": 103.943812302253
+    },
+    "City Plaza": {
+      "latitude": 1.31470866320366,
+      "longitude": 103.893508573389
+    },
+    "City Square Mall": {
+      "latitude": 1.31135169933195,
+      "longitude": 103.856724057693
+    },
+    "Compass One": {
+      "latitude": 1.3920543053799,
+      "longitude": 103.895063884132
+    },
+    "Djitsun Mall Bedok": {
+      "latitude": 1.32611970329469,
+      "longitude": 103.929554495615
+    },
+    "Downtown East": {
+      "latitude": 1.3765903645695,
+      "longitude": 103.955689449482
+    },
+    "Duo": {
+      "latitude": 1.29953434891664,
+      "longitude": 103.85840168774
+    },
+    "Eastpoint Mall": {
+      "latitude": 1.34269199750599,
+      "longitude": 103.953050756306
+    },
+    "Elias Mall": {
+      "latitude": 1.37790533095468,
+      "longitude": 103.94233582068
+    },
+    "Fairprice Hub": {
+      "latitude": 1.35349593581988,
+      "longitude": 103.940139392679
+    },
+    "Fajar Shopping Centre": {
+      "latitude": 1.38357469942896,
+      "longitude": 103.770868459633
+    },
+    "Gek Poh Shopping Centre": {
+      "latitude": 1.3487416466288,
+      "longitude": 103.697739629738
+    },
+    "Grantral Mall": {
+      "latitude": 1.31427043922294,
+      "longitude": 103.765147487482
+    },
+    "Great World City": {
+      "latitude": 1.2934759620704,
+      "longitude": 103.831975865363
+    },
+    "Greenridge Shopping Centre": {
+      "latitude": 1.38529556526689,
+      "longitude": 103.766170530147
+    },
+    "Greenwich V": {
+      "latitude": 1.38736769500018,
+      "longitude": 103.869348049282
+    },
+    "HDB Hub": {
+      "latitude": 1.33289113874462,
+      "longitude": 103.847128310325
+    },
+    "Heartland Mall": {
+      "latitude": 1.35954177325561,
+      "longitude": 103.885167372726
+    },
+    "HillV2": {
+      "latitude": 1.36267450828024,
+      "longitude": 103.76417292006
+    },
+    "Hillion Mall": {
+      "latitude": 1.37841165144214,
+      "longitude": 103.76382945872
+    },
+    "Hougang 1": {
+      "latitude": 1.37561464129476,
+      "longitude": 103.879483534695
+    },
+    "Hougang Green Shopping Mall": {
+      "latitude": 1.37931783499145,
+      "longitude": 103.88784708944
+    },
+    "Hougang Mall": {
+      "latitude": 1.37931783499145,
+      "longitude": 103.88784708944
+    },
+    "Hougang Rivercourt": {
+      "latitude": 1.36274851459883,
+      "longitude": 103.894906998774
+    },
+    "IMM": {
+      "latitude": 1.33487526118006,
+      "longitude": 103.746894773008
+    },
+    "JCube": {
+      "latitude": 1.33093978855518,
+      "longitude": 103.723072368708
+    },
+    "Jem": {
+      "latitude": 1.33329334473462,
+      "longitude": 103.743278742341
+    },
+    "Jewel Changi Airport": {
+      "latitude": 1.36023106736765,
+      "longitude": 103.989457201894
+    },
+    "Jubilee Square": {
+      "latitude": 1.37178558575829,
+      "longitude": 103.847837565378
+    },
+    "Junction 10": {
+      "latitude": 1.38018163022688,
+      "longitude": 103.76041930548
+    },
+    "Junction 8": {
+      "latitude": 1.3501820033849,
+      "longitude": 103.848515664081
+    },
+    "Junction Nine": {
+      "latitude": 1.43306021695327,
+      "longitude": 103.841649364872
+    },
+    "Jurong Point": {
+      "latitude": 1.33945200436319,
+      "longitude": 103.706685012654
+    },
+    "Kallang Wave Mall": {
+      "latitude": 1.30307515150401,
+      "longitude": 103.873149707591
+    },
+    "Keat Hong Shopping Centre": {
+      "latitude": 1.37736607441394,
+      "longitude": 103.744393648768
+    },
+    "Leisure Park Kallang": {
+      "latitude": 1.30222177381282,
+      "longitude": 103.876152665088
+    },
+    "Limbang Shopping Centre": {
+      "latitude": 1.3920738867617,
+      "longitude": 103.743099573442
+    },
+    "Lot One": {
+      "latitude": 1.38506992325619,
+      "longitude": 103.745238868238
+    },
+    "Loyang Point": {
+      "latitude": 1.36706634197242,
+      "longitude": 103.964635610477
+    },
+    "Marsiling Mall": {
+      "latitude": 1.43354318137534,
+      "longitude": 103.77988189197
+    },
+    "NEX": {
+      "latitude": 1.35076935257845,
+      "longitude": 103.872296143862
+    },
+    "Northpoint City": {
+      "latitude": 1.42822560922688,
+      "longitude": 103.836419992398
+    },
+    "Northshore Plaza": {
+      "latitude": 1.41676127156324,
+      "longitude": 103.902074379502
+    },
+    "Oasis Terraces": {
+      "latitude": 1.40282352005409,
+      "longitude": 103.91346139614
+    },
+    "Our Tampines Hub": {
+      "latitude": 1.35218046898785,
+      "longitude": 103.940598001519
+    },
+    "Parkway Parade": {
+      "latitude": 1.30106068019409,
+      "longitude": 103.905339493587
+    },
+    "Paya Lebar Square": {
+      "latitude": 1.31881486980278,
+      "longitude": 103.892580778242
+    },
+    "People's Park Centre": {
+      "latitude": 1.28564781446701,
+      "longitude": 103.843861556498
+    },
+    "People's Park Complex": {
+      "latitude": 1.2848558843058,
+      "longitude": 103.842599920236
+    },
+    "Pioneer Mall": {
+      "latitude": 1.34167331883255,
+      "longitude": 103.697244542805
+    },
+    "Punggol Plaza": {
+      "latitude": 1.39417447299355,
+      "longitude": 103.913120037036
+    },
+    "Queensway Shopping Centre": {
+      "latitude": 1.28761792586115,
+      "longitude": 103.803391140455
+    },
+    "Rivervale Mall": {
+      "latitude": 1.39221732695142,
+      "longitude": 103.904473070943
+    },
+    "Rivervale Plaza": {
+      "latitude": 1.38550420775531,
+      "longitude": 103.901988424927
+    },
+    "Rochester Mall": {
+      "latitude": 1.30540765569962,
+      "longitude": 103.788446680148
+    },
+    "Sembawang Shopping Centre": {
+      "latitude": 1.44185307934021,
+      "longitude": 103.824970378482
+    },
+    "Sim Lim Square": {
+      "latitude": 1.30290658774258,
+      "longitude": 103.853031869482
+    },
+    "Singapore Shopping Centre": {
+      "latitude": 1.29815265394505,
+      "longitude": 103.844111318107
+    },
+    "Singpost Centre": {
+      "latitude": 1.31898220434607,
+      "longitude": 103.894722842965
+    },
+    "Sun Plaza": {
+      "latitude": 1.44819535371132,
+      "longitude": 103.819502127155
+    },
+    "Sunshine Place": {
+      "latitude": 1.37789727709418,
+      "longitude": 103.739015486021
+    },
+    "Sunshine Plaza": {
+      "latitude": 1.30034762081549,
+      "longitude": 103.851046168708
+    },
+    "Taman Jurong Shopping Centre": {
+      "latitude": 1.33484487471259,
+      "longitude": 103.720462024278
+    },
+    "Tampines 1": {
+      "latitude": 1.35432321225804,
+      "longitude": 103.945141172369
+    },
+    "Tampines Mall": {
+      "latitude": 1.35259361362837,
+      "longitude": 103.944785968039
+    },
+    "Tanglin Mall": {
+      "latitude": 1.30485342102105,
+      "longitude": 103.823883490852
+    },
+    "Tanjong Pagar Centre": {
+      "latitude": 1.27658360696843,
+      "longitude": 103.845936303594
+    },
+    "Teck Whye Shopping Centre": {
+      "latitude": 1.38004752975397,
+      "longitude": 103.752483841199
+    },
+    "Tekka Centre": {
+      "latitude": 1.30624722914968,
+      "longitude": 103.849956033902
+    },
+    "The Clementi Mall": {
+      "latitude": 1.31489619639366,
+      "longitude": 103.764423054189
+    },
+    "The Poiz": {
+      "latitude": 1.33135550782584,
+      "longitude": 103.868150095119
+    },
+    "The Seletar Mall": {
+      "latitude": 1.39150192642807,
+      "longitude": 103.87617162828
+    },
+    "The South Beach": {
+      "latitude": 1.29498804392056,
+      "longitude": 103.856276242094
+    },
+    "The Star Vista": {
+      "latitude": 1.30681500712523,
+      "longitude": 103.788462732266
+    },
+    "Thomson Plaza": {
+      "latitude": 1.35432524209239,
+      "longitude": 103.830328102928
+    },
+    "Thomson V": {
+      "latitude": 1.35319495337208,
+      "longitude": 103.835564729862
+    },
+    "Tiong Bahru Plaza": {
+      "latitude": 1.28633177192832,
+      "longitude": 103.827550771424
+    },
+    "United Square": {
+      "latitude": 1.31724362960663,
+      "longitude": 103.844003130499
+    },
+    "Upper Serangoon Shopping Centre": {
+      "latitude": 1.35348082277147,
+      "longitude": 103.878828134896
+    },
+    "Velocity@Novena Square": {
+      "latitude": 1.31929542501907,
+      "longitude": 103.844191353077
+    },
+    "Vista Point": {
+      "latitude": 1.43099931590445,
+      "longitude": 103.794101574732
+    },
+    "Waterway Point": {
+      "latitude": 1.4064128346795,
+      "longitude": 103.902188891645
+    },
+    "West Coast Plaza": {
+      "latitude": 1.30358622534992,
+      "longitude": 103.76610375397
+    },
+    "West Mall": {
+      "latitude": 1.35037541626109,
+      "longitude": 103.74912389291
+    },
+    "Westgate": {
+      "latitude": 1.33415767556867,
+      "longitude": 103.742766484424
+    },
+    "White Sands": {
+      "latitude": 1.37228761596577,
+      "longitude": 103.949733905672
+    },
+    "Wisteria Mall": {
+      "latitude": 1.41798969122298,
+      "longitude": 103.841317292608
+    },
+    "Woodlands Civic Centre": {
+      "latitude": 1.43515024446739,
+      "longitude": 103.786816106255
+    },
+    "Woodlands Mart": {
+      "latitude": 1.44564787003157,
+      "longitude": 103.798162285805
+    },
+    "Woodlands North Plaza": {
+      "latitude": 1.44283592110679,
+      "longitude": 103.790770766025
+    },
+    "Yew Tee Point": {
+      "latitude": 1.39708432396576,
+      "longitude": 103.746598000147
+    },
+    "Yew Tee Square": {
+      "latitude": 1.39804736098268,
+      "longitude": 103.74708477866
+    },
+    "Zhongshan Mall": {
+      "latitude": 1.32694504484324,
+      "longitude": 103.846554377679
+    },
+    "i12 Katong": {
+      "latitude": 1.30522306203042,
+      "longitude": 103.905043928938
+    },
+    "myVillage At Serangoon Garden": {
+      "latitude": 1.36511490572797,
+      "longitude": 103.865159501442
+    }
+  }
+}

@@ -1,0 +1,313 @@
+{% extends "base.html" %} {% block extra_css %}
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<style>
+  #map {
+    height: calc(100vh - 100px);
+    width: 100%;
+  }
+  .property-details {
+    position: fixed;
+    right: -400px;
+    top: 56px;
+    width: 400px;
+    height: calc(100vh - 56px);
+    background: white;
+    padding: 24px;
+    box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+  .property-details.active {
+    right: 0;
+  }
+  .close-details {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 32px;
+    height: 32px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    color: #64748b;
+  }
+  .close-details:hover {
+    background: #f1f5f9;
+    color: #334155;
+    transform: scale(1.05);
+  }
+  .property-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .property-section {
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-size: 14px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .section-content {
+    color: #334155;
+    font-size: 16px;
+  }
+  .distance-tag {
+    display: inline-block;
+    background: #e2e8f0;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #475569;
+    margin-top: 4px;
+  }
+  .price-value {
+    font-size: 24px;
+    color: #2563eb;
+    font-weight: 600;
+  }
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .refresh-button {
+    background: white;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+
+  .refresh-button:hover {
+    background: #f8fafc;
+    transform: scale(1.02);
+  }
+
+  .refresh-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .refresh-button.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  .refresh-button.loading svg {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="relative">
+  <div id="map"></div>
+  <div id="propertyDetails" class="property-details">
+    <button class="close-details" title="Close">&times;</button>
+    <h2 class="text-2xl font-bold mb-6 pr-8 text-gray-800">Property Details</h2>
+    <div id="propertyInfo"></div>
+  </div>
+</div>
+{% endblock %} {% block extra_js %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // Initialize map centered on Singapore
+  const map = L.map("map").setView([1.3521, 103.8198], 12);
+  let markers = L.layerGroup().addTo(map);
+
+  // Add OpenStreetMap tiles
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "© OpenStreetMap contributors",
+  }).addTo(map);
+
+  // Create custom refresh control
+  const RefreshControl = L.Control.extend({
+    options: {
+      position: "topleft",
+    },
+
+    onAdd: function () {
+      const container = L.DomUtil.create("div", "leaflet-bar");
+      const button = L.DomUtil.create("button", "refresh-button", container);
+      button.type = "button";
+      button.title = "Load new properties";
+      button.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+        
+      `;
+
+      button.addEventListener("click", async function () {
+        if (button.classList.contains("loading")) return;
+
+        button.classList.add("loading");
+        await loadProperties();
+        button.classList.remove("loading");
+      });
+
+      // Prevent map click when clicking the button
+      L.DomEvent.disableClickPropagation(container);
+
+      return container;
+    },
+  });
+
+  map.addControl(new RefreshControl());
+
+  // Function to load properties
+  async function loadProperties() {
+    try {
+      const response = await fetch("/get_random_properties");
+      const properties = await response.json();
+
+      // Clear existing markers
+      markers.clearLayers();
+
+      // Add new markers
+      properties.forEach((property) => {
+        const marker = L.marker([property.latitude, property.longitude]).on(
+          "click",
+          () => showPropertyDetails(property)
+        );
+        markers.addLayer(marker);
+      });
+
+      // Close property details if open
+      document.getElementById("propertyDetails").classList.remove("active");
+    } catch (error) {
+      console.error("Error loading properties:", error);
+    }
+  }
+
+  // Initial load
+  loadProperties();
+
+  // Function to format property details
+  function formatPropertyDetails(property) {
+    return `
+      <div class="space-y-6">
+        <div class="property-card">
+          <div class="property-section">
+            <div class="section-title">Address</div>
+            <div class="section-content">Block ${property.block_no} ${
+      property.street_name
+    }</div>
+          </div>
+          <div class="details-grid">
+            <div class="property-section mb-0">
+              <div class="section-title">Price</div>
+              <div class="price-value">$${property.resale_price.toLocaleString()}</div>
+            </div>
+            <div class="property-section mb-0">
+              <div class="section-title">Remaining Lease</div>
+              <div class="section-content">${
+                property.remaining_year
+              } years</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="details-grid">
+            <div class="property-section mb-0">
+              <div class="section-title">Flat Type</div>
+              <div class="section-content">${property.flat_type}</div>
+            </div>
+            <div class="property-section mb-0">
+              <div class="section-title">Flat Model</div>
+              <div class="section-content">${property.flat_model}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-section mb-0">
+            <div class="section-title">Town</div>
+            <div class="section-content" style="text-transform: capitalize;">${property.town.toLowerCase()}</div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-section">
+            <div class="section-title">Nearby Amenities</div>
+            <div class="details-grid mb-4">
+              <div>
+                <div class="text-sm font-medium text-gray-500 mb-1">MRT Station</div>
+                <div class="section-content mb-1">${
+                  property.nearest_mrt_station
+                }</div>
+                <span class="distance-tag">${property.nearest_mrt_distance_km.toFixed(
+                  2
+                )} km</span>
+              </div>
+              <div>
+                <div class="text-sm font-medium text-gray-500 mb-1">Shopping Mall</div>
+                <div class="section-content mb-1">${property.nearest_mall}</div>
+                <span class="distance-tag">${property.nearest_mall_distance_km.toFixed(
+                  2
+                )} km</span>
+              </div>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-gray-500 mb-1">Distance to CBD</div>
+              <span class="distance-tag">${property.min_dist_to_cbd.toFixed(
+                2
+              )} km</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Show property details
+  function showPropertyDetails(property) {
+    document.getElementById("propertyInfo").innerHTML =
+      formatPropertyDetails(property);
+    document.getElementById("propertyDetails").classList.add("active");
+  }
+
+  // Close property details
+  document.querySelector(".close-details").addEventListener("click", () => {
+    document.getElementById("propertyDetails").classList.remove("active");
+  });
+
+  // Close on escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      document.getElementById("propertyDetails").classList.remove("active");
+    }
+  });
+</script>
+{% endblock %}

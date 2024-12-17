@@ -1,0 +1,357 @@
+{% extends "base.html" %} {% block extra_css %}
+<link
+  href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/style.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class="min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+    <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+      <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+        HDB Price Prediction Form
+      </h1>
+
+      <form id="predictionForm" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Town Selection -->
+          <div>
+            <label for="town" class="block text-sm font-medium text-gray-700">
+              Town
+            </label>
+            <select
+              id="town"
+              name="town"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Select Town</option>
+            </select>
+          </div>
+
+          <!-- Flat Type -->
+          <div>
+            <label
+              for="flat_type"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Flat Type
+            </label>
+            <select
+              id="flat_type"
+              name="flat_type"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Select Flat Type</option>
+            </select>
+          </div>
+
+          <!-- Storey Range -->
+          <div>
+            <label
+              for="storey_range"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Storey Range
+            </label>
+            <select
+              id="storey_range"
+              name="storey_range"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Select Storey Range</option>
+            </select>
+          </div>
+
+          <!-- Floor Area -->
+          <div>
+            <label
+              for="floor_area_sqm"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Floor Area (sqm)
+            </label>
+            <input
+              type="number"
+              id="floor_area_sqm"
+              name="floor_area_sqm"
+              required
+              step="0.01"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Flat Model -->
+          <div>
+            <label
+              for="flat_model"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Flat Model
+            </label>
+            <select
+              id="flat_model"
+              name="flat_model"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Select Flat Model</option>
+            </select>
+          </div>
+
+          <!-- Lease Dates -->
+          <div class="md:col-span-2 grid grid-cols-2 gap-4">
+            <!-- Lease Commence Date -->
+            <div>
+              <label
+                for="lease_commence_date"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Lease Commence Date
+              </label>
+              <input
+                type="date"
+                id="lease_commence_date"
+                name="lease_commence_date"
+                required
+                min="1960-01-01"
+                max="2024-12-31"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <!-- Contract Date -->
+            <div>
+              <label
+                for="contract_date"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Contract Date
+              </label>
+              <input
+                type="date"
+                id="contract_date"
+                name="contract_date"
+                required
+                min="1960-01-01"
+                max="2024-12-31"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <!-- Address Section -->
+          <div class="md:col-span-2 grid grid-cols-3 gap-4">
+            <!-- Street Name -->
+            <div class="col-span-2">
+              <label
+                for="street_name"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Street Name
+              </label>
+              <select
+                id="street_name"
+                name="street_name"
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              >
+                <option value="">Select Street Name</option>
+              </select>
+            </div>
+
+            <!-- Block Number -->
+            <div>
+              <label
+                for="block_no"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Block Number
+              </label>
+              <input
+                type="text"
+                id="block_no"
+                name="block_no"
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <!-- Location Details -->
+          <div class="md:col-span-2 grid grid-cols-2 gap-4">
+            <div>
+              <label
+                for="latitude"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Latitude
+              </label>
+              <input
+                type="number"
+                id="latitude"
+                name="latitude"
+                required
+                step="any"
+                readonly
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+              />
+            </div>
+
+            <div>
+              <label
+                for="longitude"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Longitude
+              </label>
+              <input
+                type="number"
+                id="longitude"
+                name="longitude"
+                required
+                step="any"
+                readonly
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-gray-50"
+              />
+            </div>
+          </div>
+
+          <!-- Nearest MRT Station -->
+          <div>
+            <label
+              for="nearest_mrt_station"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Nearest MRT Station
+            </label>
+            <select
+              id="nearest_mrt_station"
+              name="nearest_mrt_station"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Select Nearest MRT Station</option>
+            </select>
+          </div>
+
+          <!-- MRT Distance -->
+          <div>
+            <label
+              for="nearest_mrt_distance_km"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Distance to MRT (km)
+            </label>
+            <input
+              type="number"
+              id="nearest_mrt_distance_km"
+              name="nearest_mrt_distance_km"
+              required
+              step="0.0001"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Nearest Mall -->
+          <div>
+            <label
+              for="nearest_mall"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Nearest Mall
+            </label>
+            <select
+              id="nearest_mall"
+              name="nearest_mall"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            >
+              <option value="">Select Nearest Mall</option>
+            </select>
+          </div>
+
+          <!-- Mall Distance -->
+          <div>
+            <label
+              for="nearest_mall_distance_km"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Distance to Mall (km)
+            </label>
+            <input
+              type="number"
+              id="nearest_mall_distance_km"
+              name="nearest_mall_distance_km"
+              required
+              step="any"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Distance to CBD -->
+          <div>
+            <label
+              for="min_dist_to_cbd"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Distance to CBD (km)
+            </label>
+            <input
+              type="number"
+              id="min_dist_to_cbd"
+              name="min_dist_to_cbd"
+              required
+              step="any"
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Remaining Years -->
+          <div>
+            <label
+              for="remaining_year"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Remaining Years
+            </label>
+            <input
+              type="number"
+              id="remaining_year"
+              name="remaining_year"
+              required
+              readonly
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          Get Price Prediction
+        </button>
+      </form>
+
+      <!-- Result Section -->
+      <div id="result" class="mt-6 hidden">
+        <div class="p-4 rounded-md bg-gray-50">
+          <h2 class="text-lg font-medium text-gray-900">Predicted Price</h2>
+          <p
+            id="prediction-text"
+            class="mt-2 text-xl font-bold text-blue-600"
+          ></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block extra_js %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

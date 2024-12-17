@@ -1,0 +1,28 @@
+/* Custom styles to complement Tailwind CSS */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Add smooth transitions */
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom focus styles */
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom hover effects */
+button:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease-in-out;
+}
